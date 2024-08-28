@@ -11,9 +11,9 @@
   align-items: center;
 }
 .banner-image {
-  height: 30vh;
-  width: 95%;
-  margin-top: 30px;
+  height: 80vh;
+  width: 90%;
+  margin: 30px;
   border-radius: 8px;
 }
 .heading-latest-match {
@@ -52,4 +52,18 @@
 }
 .DC {
   background: linear-gradient(to top, #1e293b, #4f5db0);
+}
+.back-btn {
+  height: 30px;
+  width: 90px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'roboto';
+  color: #ffffff;
+  background-color: #2596be;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  margin: 20px;
 }

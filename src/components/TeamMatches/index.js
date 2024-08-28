@@ -1,7 +1,9 @@
 // Write your code here
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
+import PieChart from '../PieChart'
 import LatestMatch from '../LatestMatch'
 import MatchCard from '../MatchCard'
 import './index.css'
@@ -35,6 +37,7 @@ class TeamMatches extends Component {
         umpires: fetchData.latest_match_details.umpires,
         venue: fetchData.latest_match_details.venue,
       },
+
       recentMatches: fetchData.recent_matches.map(eachItem => ({
         umpires: eachItem.umpires,
         result: eachItem.result,
@@ -79,6 +82,24 @@ class TeamMatches extends Component {
     )
   }
 
+  noOfMatches = value => {
+    const {matchesData} = this.state
+    const {latestMatchDetails, recentMatches} = matchesData
+    const {matchStatus} = latestMatchDetails ?? ''
+    const matchCount =
+      Array.isArray(recentMatches) &&
+      recentMatches.filter(match => match.matchStatus === value)
+    const latestMatchCount = matchStatus === value ? 1 : 0
+    const result = matchCount.length + latestMatchCount
+    return result
+  }
+
+  generatePieChartData = () => [
+    {name: 'Won', value: this.noOfMatches('Won'), id: 1},
+    {name: 'Lost', value: this.noOfMatches('Lost'), id: 2},
+    {name: 'Drawn', value: this.noOfMatches('Drawn'), id: 3},
+  ]
+
   renderLoader = () => (
     // testid="loader"
     <div className="loader-container">
@@ -88,12 +109,19 @@ class TeamMatches extends Component {
 
   render() {
     const {isLoading} = this.state
+
     const {match} = this.props
     const {params} = match
     const {id} = params
     return (
       <div className={`app-team-matches-container ${id}`}>
         {isLoading ? this.renderLoader() : this.renderLatestMatch()}
+        <PieChart data={this.generatePieChartData()} />
+        <Link to="/">
+          <button type="button" className="back-btn">
+            Back
+          </button>
+        </Link>
       </div>
     )
   }

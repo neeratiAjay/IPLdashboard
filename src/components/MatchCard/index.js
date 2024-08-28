@@ -5,9 +5,15 @@ import {Component} from 'react'
 class MatchCard extends Component {
   render() {
     const {matchData} = this.props
-    const {result, competingTeam, competingTeamLogo, matchStatus} = matchData
+    const {
+      result,
+      competingTeam,
+      competingTeamLogo,
+      matchStatus,
+      id,
+    } = matchData
     return (
-      <li className={`match-card ${matchStatus}`}>
+      <li className={`match-card ${matchStatus}`} key={id}>
         <img
           src={competingTeamLogo}
           alt={`competing team ${competingTeam}`}
