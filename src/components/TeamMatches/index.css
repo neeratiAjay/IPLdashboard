@@ -1,0 +1,55 @@
+/* Write your CSS here */
+.app-team-matches-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner-image {
+  height: 30vh;
+  width: 95%;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+.heading-latest-match {
+  color: #ffffff;
+  font-family: 'bree serif';
+  font-size: 24px;
+  padding-left: 20px;
+  align-self: flex-start;
+}
+.list-container {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.RCB {
+  background: linear-gradient(to top, #1e293b, #a4261d);
+}
+.KKR {
+  background: linear-gradient(to top, #1e293b, #5755a7);
+}
+.KXP {
+  background: linear-gradient(to top, #1e293b, #d91c1f);
+}
+.CSK {
+  background: linear-gradient(to top, #1e293b, #f7db00);
+}
+.RR {
+  background: linear-gradient(to top, #1e293b, #da237b);
+}
+.MI {
+  background: linear-gradient(to top, #1e293b, #13418b);
+}
+.SH {
+  background: linear-gradient(to top, #1e293b, #f26d22);
+}
+.DC {
+  background: linear-gradient(to top, #1e293b, #4f5db0);
+}

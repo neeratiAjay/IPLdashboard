@@ -1,0 +1,86 @@
+/* Write your CSS here */
+.latest-match-container {
+  background-color: #1e293b;
+  min-height: 50vh;
+  border-radius: 8px;
+  width: 95%;
+  align-self: flex-start;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.bottom-row-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-row-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.image-container {
+  align-self: center;
+  margin-top: 30px;
+}
+.flex-container {
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 100%;
+}
+.team-heading {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'bree serif';
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.venue {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'bree serif';
+}
+.result {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'bree serif';
+}
+.team-logo {
+  height: 140px;
+  width: 140px;
+}
+.line {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0px;
+}
+.second-innings-container {
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.text1 {
+  color: #ffffff;
+  font-size: 18px;
+  font-family: 'bree serif';
+}
+@media (min-width: 768px) {
+  .line {
+    display: none;
+  }
+  .second-innings-container {
+    padding-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .flex-container {
+    width: 60%;
+  }
+  .flex-row-container {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .second-innings-container {
+    text-align: right;
+  }
+}
